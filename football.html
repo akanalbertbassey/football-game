@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #555;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #888;
+        }
+        .content {
+            padding: 20px;
+        }
+        .player, .club {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .player h3, .club h3 {
+            color: #333;
+        }
+        .player p, .club p {
+            font-size: 16px;
+            color: black; /* Change text color to black for player and club descriptions */
+        }
+        .player .bio, .club .bio {
+            margin-top: 10px;
+            font-style: italic;
+            color: black;
+        }
+        .player img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .player-info {
+            display: flex;
+            align-items: center;
+        }
+        .player-info div {
+            margin-left: 15px;
+        }
+        .player h3 {
+            color: blue; /* Player name in blue */
+        }
+        .achievements {
+            margin-top: 10px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .achievements li {
+            background-color: #f0f0f0;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><img src="championship logo.png" alt=""></h1>
+</header>
+
+<nav>
+    <a href="#clubs" onclick="showClubs()">Clubs</a>
+    <a href="#players" onclick="showPlayers()">Players</a>
+</nav>
+
+<div class="content" id="content">
+    <!-- Default Content (can be switched with JavaScript) -->
+    <div id="clubs" class="club">
+        <h3>Top Football Clubs</h3>
+        <p>Explore the most famous football clubs around the world!</p>
+    </div>
+
+    <div id="players" class="player" style="display:none;">
+        <h3>Top Football Players</h3>
+        <p>Discover the best players in football, their age, biography, salary, achievements, and images.</p>
+
+        <!-- Player 1: Lionel Messi -->
+        <div id="player1" class="player">
+            <div class="player-info">
+                <img src="lionel-messi.jpeg" alt="Lionel Messi">
+                <div>
+                    <h3>Lionel Messi</h3>
+                    <p>Age: 37</p>
+                    <p>Salary: $75 million per year</p>
+                    <p class="bio">Lionel Messi is widely regarded as one of the greatest football players of all time. He has won multiple Ballon d'Or awards and is known for his incredible dribbling, vision, and playmaking abilities.</p>
+                    <h4>Achievements:</h4>
+                    <ul class="achievements">
+                        <li>7x Ballon d'Or Winner</li>
+                        <li>4x UEFA Champions League Winner</li>
+                        <li>10x La Liga Winner</li>
+                        <li>1x FIFA World Cup Winner (2022)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player 2: Cristiano Ronaldo -->
+        <div id="player2" class="player">
+            <div class="player-info">
+                <img src="cristiano-ronaldo.jpeg" alt="Cristiano Ronaldo">
+                <div>
+                    <h3>Cristiano Ronaldo</h3>
+                    <p>Age: 39</p>
+                    <p>Salary: $60 million per year</p>
+                    <p class="bio">Cristiano Ronaldo is a legendary forward known for his athleticism, goal-scoring ability, and leadership on and off the pitch. He has won numerous titles across various leagues, including the Premier League, La Liga, and Serie A.</p>
+                    <h4>Achievements:</h4>
+                    <ul class="achievements">
+                        <li>5x Ballon d'Or Winner</li>
+                        <li>5x UEFA Champions League Winner</li>
+                        <li>7x League Titles (Premier League, La Liga, Serie A)</li>
+                        <li>1x European Championship Winner (2016)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player 3: Neymar Jr. -->
+        <div id="player3" class="player">
+            <div class="player-info">
+                <img src="neymar-jr.jpeg" alt="Neymar Jr.">
+                <div>
+                    <h3>Neymar Jr.</h3>
+                    <p>Age: 32</p>
+                    <p>Salary: $70 million per year</p>
+                    <p class="bio">Neymar is one of the most skillful players in the world. Known for his flair, creativity, and goal-scoring prowess, Neymar has made a significant impact at both the club and international level.</p>
+                    <h4>Achievements:</h4>
+                    <ul class="achievements">
+                        <li>1x Copa Libertadores Winner</li>
+                        <li>2x UEFA Champions League Winner</li>
+                        <li>1x Olympic Gold Medalist (2016)</li>
+                        <li>1x Copa América Winner (2013)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player 4: Kylian Mbappé -->
+        <div id="player4" class="player">
+            <div class="player-info">
+                <img src="Kylian Mbappé.jpeg" alt="Kylian Mbappé">
+                <div>
+                    <h3>Kylian Mbappé</h3>
+                    <p>Age: 25</p>
+                    <p>Salary: $110 million per year</p>
+                    <p class="bio">Kylian Mbappé is known for his incredible pace, dribbling, and goal-scoring ability. He is considered one of the brightest young stars in world football, already winning multiple league titles and a World Cup.</p>
+                    <h4>Achievements:</h4>
+                    <ul class="achievements">
+                        <li>1x FIFA World Cup Winner (2018)</li>
+                        <li>5x Ligue 1 Winner</li>
+                        <li>1x UEFA Nations League Winner (2021)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player 5: Robert Lewandowski -->
+        <div id="player5" class="player">
+            <div class="player-info">
+                <img src="Robert Lewandowski.jpeg" alt="Robert Lewandowski">
+                <div>
+                    <h3>Robert Lewandowski</h3>
+                    <p>Age: 36</p>
+                    <p>Salary: $45 million per year</p>
+                    <p class="bio">Robert Lewandowski is one of the best strikers in football history, known for his goal-scoring record and incredible physicality. He has been a dominant force in the Bundesliga for many years.</p>
+                    <h4>Achievements:</h4>
+                    <ul class="achievements">
+                        <li>1x FIFA Best Player Award</li>
+                        <li>8x Bundesliga Winner</li>
+                        <li>1x UEFA Champions League Winner</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player 6: Mohamed Salah -->
+        <div id="player6" class="player">
+            <div class="player-info">
+                <img src="Mohamed Salah.jpeg" alt="Mohamed Salah">
+                <div>
+                    <h3>Mohamed Salah</h3>
+                    <p>Age: 32</p>
+                    <p>Salary: $22 million per year</p>
+                    <p class="bio">Mohamed Salah is known for his speed, dribbling, and exceptional goal-scoring ability. He has been a key player for Liverpool, leading them to multiple Premier League and Champions League titles.</p>
+                    <h4>Achievements:</h4>
+                    <ul class="achievements">
+                        <li>1x Premier League Winner</li>
+                        <li>1x UEFA Champions League Winner</li>
+                        <li>2x Africa Cup of Nations Winner</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player 7: Virgil van Dijk -->
+        <div id="player7" class="player">
+            <div class="player-info">
+                <img src="Virgil van Dijk.jpeg" alt="Virgil van Dijk">
+                <div>
+                    <h3>Virgil van Dijk</h3>
+                    <p>Age: 33</p>
+                    <p>Salary: $15 million per year</p>
+                    <p class="bio">Virgil van Dijk is widely considered one of the best defenders in the world. His leadership, aerial ability, and composure on the ball make him a crucial part of Liverpool's defense.</p>
+                    <h4>Achievements:</h4>
+                    <ul class="achievements">
+                        <li>1x UEFA Champions League Winner</li>
+                        <li>1x Premier League Winner</li>
+                        <li>2x FIFA Best Defender</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player 8: Kevin De Bruyne -->
+        <div id="player8" class="player">
+            <div class="player-info">
+                <img src="Kevin De Bruyne.jpeg" alt="Kevin De Bruyne">
+                <div>
+                    <h3>Kevin De Bruyne</h3>
+                    <p>Age: 33</p>
+                    <p>Salary: $20 million per year</p>
+                    <p class="bio">Kevin De Bruyne is widely regarded as one of the best midfielders in the world, known for his passing range, vision, and ability to create goal-scoring opportunities.</p>
+                    <h4>Achievements:</h4>
+                    <ul class="achievements">
+                        <li>4x Premier League Winner</li>
+                        <li>1x UEFA Champions League Winner</li>
+                        <li>2x Premier League Player of the Season</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player 9: Luka Modrić -->
+        <div id="player9" class="player">
+            <div class="player-info">
+                <img src="Luka Modrić.jpeg" alt="Luka Modrić">
+                <div>
+                    <h3>Luka Modrić</h3>
+                    <p>Age: 38</p>
+                    <p>Salary: $12 million per year</p>
+                    <p class="bio">Luka Modrić is one of the best midfielders of his generation. Known for his vision, passing, and composure, he has been a key player for both Real Madrid and Croatia.</p>
+                    <h4>Achievements:</h4>
+                    <ul class="achievements">
+                        <li>1x Ballon d'Or Winner</li>
+                        <li>5x UEFA Champions League Winner</li>
+                        <li>1x FIFA World Cup Runner-up (2018)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player 10: Sergio Agüero -->
+        <div id="player10" class="player">
+            <div class="player-info">
+                <img src="Sergio Agüero.jpeg" alt="Sergio Agüero">
+                <div>
+                    <h3>Sergio Agüero</h3>
+                    <p>Age: 36</p>
+                    <p>Salary: $10 million per year</p>
+                    <p class="bio">Sergio Agüero is one of the best goal-scorers of his generation. Known for his positioning and finishing ability, he is a club legend at Manchester City.</p>
+                    <h4>Achievements:</h4>
+                    <ul class="achievements">
+                        <li>5x Premier League Winner</li>
+                        <li>1x FA Cup Winner</li>
+                        <li>1x Copa América Winner (2021)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showClubs() {
+        document.getElementById("clubs").style.display = "block";
+        document.getElementById("players").style.display = "none";
+    }
+
+    function showPlayers() {
+        document.getElementById("players").style.display = "block";
+        document.getElementById("clubs").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
